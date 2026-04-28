@@ -43,13 +43,6 @@ const projects: Project[] = [
     tags: ['C#', 'Unity'],
   },
   {
-    title: 'Data Visualisation',
-    description:
-      'Explores the use of D3.js to build a visualisation of the FIFA World Cup 2022 dataset.',
-    url: 'https://mayar.abertay.ac.uk/~1900598/cmp419-data-vis/SourceCode/View/index.html',
-    tags: ['JavaScript', 'PHP', 'SQL'],
-  },
-  {
     title: 'Tapo L530 Smart Bulb Control',
     description:
       'A Wemos circuit that toggles a smart bulb with a button and adjusts colour through a potentiometer.',
@@ -91,7 +84,7 @@ const Projects: React.FC = () => {
           <p className="eyebrow">Work</p>
           <h2 className="section-title">Selected Projects</h2>
           <p className="section-subtitle">
-            A collection of academic and personal builds across hardware, mobile and games.
+            A collection of academic and personal projects.
           </p>
         </header>
         <div className="projects-grid">
