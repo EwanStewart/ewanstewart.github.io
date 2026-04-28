@@ -15,6 +15,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'PhotoVault',
+    description:
+      'A Raspberry Pi 7-inch touchscreen photo frame running as a Flask kiosk. Pulls photos from Google Drive with a live Spotify overlay. A side panel controls TP-Link Tapo smart bulbs on the same network.',
+    url: 'https://github.com/EwanStewart/PhotoVault',
+    tags: ['Python', 'Flask', 'Raspberry Pi', 'Spotify API'],
+  },
+  {
     title: 'Genetic Pong',
     description:
       'A genetic approach to creating an infinite Pong game. The graphical display uses SFML and the genetic algorithm is implemented in C++, applying mutation, crossover and selection to evolve generations of paddles.',
@@ -81,7 +88,6 @@ const Projects: React.FC = () => {
       <Navbar />
       <main className="page">
         <header className="section-header">
-          <p className="eyebrow">Work</p>
           <h2 className="section-title">Selected Projects</h2>
           <p className="section-subtitle">
             A collection of academic and personal projects.
