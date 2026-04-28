@@ -18,7 +18,7 @@ import { faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-i
 const PROJECTS_URL = `${process.env.PUBLIC_URL || ''}/?data=projects`;
 
 const monthsBetween = (start: Date, end: Date): number => {
-  return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+  return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
 };
 
 const formatDuration = (months: number): string => {
