@@ -1,8 +1,9 @@
 import React from 'react';
 import CV from './CV.pdf';
 
-const HOME_URL = 'https://ewanstewart.github.io/portfolio/';
-const PROJECTS_URL = 'https://ewanstewart.github.io/portfolio/?data=projects';
+const BASE = process.env.PUBLIC_URL || '';
+const HOME_URL = `${BASE}/`;
+const PROJECTS_URL = `${BASE}/?data=projects`;
 
 const Navbar: React.FC = () => {
   const params = new URLSearchParams(window.location.search);

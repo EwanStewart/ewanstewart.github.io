@@ -12,7 +12,7 @@ import github from './images/github.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const PROJECTS_URL = 'https://ewanstewart.github.io/portfolio/?data=projects';
+const PROJECTS_URL = `${process.env.PUBLIC_URL || ''}/?data=projects`;
 
 const Portfolio: React.FC = () => {
   const params = new URLSearchParams(window.location.search);
