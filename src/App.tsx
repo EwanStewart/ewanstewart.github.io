@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Navbar from './Navbar';
 import Projects from './Projects';
+import CV from './CV.pdf';
 
 import profile from './images/profile.jpg';
 import linkedin from './images/linkedin.png';
@@ -68,18 +69,21 @@ const Portfolio: React.FC = () => {
                 <a href={PROJECTS_URL} className="btn-primary">
                   View Projects <FontAwesomeIcon icon={faArrowRight} />
                 </a>
-                <div className="social-row">
-                  <a href="https://www.linkedin.com/in/ewan-stewart/" aria-label="LinkedIn">
-                    <img src={linkedin} className="social-icon" alt="LinkedIn" />
-                  </a>
-                  <a href="https://github.com/EwanStewart" aria-label="GitHub">
-                    <img src={github} className="social-icon" alt="GitHub" />
-                  </a>
-                </div>
+                <a href={CV} target="_blank" rel="noreferrer" className="btn-primary">
+                  View My CV <FontAwesomeIcon icon={faArrowRight} />
+                </a>
               </div>
             </div>
             <div className="hero-portrait">
               <img src={profile} className="profilePic" alt="Ewan Stewart" />
+              <div className="social-row">
+                <a href="https://www.linkedin.com/in/ewan-stewart/" aria-label="LinkedIn">
+                  <img src={linkedin} className="social-icon" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/EwanStewart" aria-label="GitHub">
+                  <img src={github} className="social-icon" alt="GitHub" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
