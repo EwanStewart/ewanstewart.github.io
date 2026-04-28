@@ -32,12 +32,13 @@ const Portfolio: React.FC = () => {
         <section className="hero">
           <div className="hero-grid">
             <div className="hero-text">
-              <p className="eyebrow">Portfolio</p>
+              <p className="eyebrow">Introduction</p>
               <h1 className="nameTitle">Ewan Stewart</h1>
-              <p className="tagline">Software Developer · Computing Graduate</p>
+              <p className="tagline">Software Engineer</p>
               <p className="bio">
-                A recent Computing graduate from the University of Abertay with a 2:1 BSc Hons Degree.
-                I am passionate about software development and creating effective, well-considered user experiences.
+                Software Engineer with three years of industry experience across consultancy and startup teams.
+                I have shipped software for clients in defence, medical and robotics. C++ and C# are my strongest languages.
+                I advocate for strong development practices throughout the software lifecycle.
               </p>
               <div className="contact-list">
                 <a className="contact-item" href="tel:+447484275241">

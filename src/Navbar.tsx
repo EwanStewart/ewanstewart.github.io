@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="topbar">
       <div className="topbar-inner">
-        <a href={HOME_URL} className="brand">Ewan Stewart</a>
+        <a href={HOME_URL} className="brand">Portfolio</a>
         <div className="nav-links">
           {onProjects ? (
             <a href={HOME_URL} className="nav-link">About</a>
