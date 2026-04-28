@@ -32,13 +32,10 @@ const Portfolio: React.FC = () => {
         <section className="hero">
           <div className="hero-grid">
             <div className="hero-text">
-              <p className="eyebrow">Introduction</p>
               <h1 className="nameTitle">Ewan Stewart</h1>
-              <p className="tagline">Software Engineer</p>
               <p className="bio">
-                Software Engineer with three years of industry experience across consultancy and startup teams.
-                I have shipped software for clients in defence, medical and robotics. C++ and C# are my strongest languages.
-                I advocate for strong development practices throughout the software lifecycle.
+                Software Engineer with three years of industry experience in both consultancy and startup environments.
+                Produced production software and involved in the full software development lifecycle across defence, medical and robotics projects.
               </p>
               <div className="contact-list">
                 <a className="contact-item" href="tel:+447484275241">
@@ -55,7 +52,7 @@ const Portfolio: React.FC = () => {
                   View Projects <FontAwesomeIcon icon={faArrowRight} />
                 </a>
                 <div className="social-row">
-                  <a href="https://www.linkedin.com/in/ewan-stewart-4905b0266/" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/ewan-stewart/" aria-label="LinkedIn">
                     <img src={linkedin} className="social-icon" alt="LinkedIn" />
                   </a>
                   <a href="https://github.com/EwanStewart" aria-label="GitHub">
