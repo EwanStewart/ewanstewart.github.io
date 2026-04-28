@@ -1,5 +1,5 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Navbar from './Navbar';
@@ -10,81 +10,70 @@ import linkedin from './images/linkedin.png';
 import github from './images/github.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+const PROJECTS_URL = 'https://ewanstewart.github.io/portfolio/?data=projects';
 
 const Portfolio: React.FC = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const dataParam = urlParams.get('data');
-  var result = dataParam === "projects" ? 0 : 1;
-  if (result == 1) {
-    return (
-      <html>
-        <Helmet>
-          <title>Portfolio</title>
-        </Helmet>
-        <Navbar/>
-          <div className="container-fluid bg-light">
-          <body>
-            <div className="container">
-              <div className="row">
-                <div className="col-sm-12">
-                  <h1 className="nameTitle">Ewan Stewart</h1>
-                </div>
+  const params = new URLSearchParams(window.location.search);
+  const showProjects = params.get('data') === 'projects';
+
+  if (showProjects) {
+    return <Projects />;
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>Ewan Stewart | Portfolio</title>
+      </Helmet>
+      <Navbar />
+      <main className="page">
+        <section className="hero">
+          <div className="hero-grid">
+            <div className="hero-text">
+              <p className="eyebrow">Portfolio</p>
+              <h1 className="nameTitle">Ewan Stewart</h1>
+              <p className="tagline">Software Developer · Computing Graduate</p>
+              <p className="bio">
+                A recent Computing graduate from the University of Abertay with a 2:1 BSc Hons Degree.
+                I am passionate about software development and creating effective, well-considered user experiences.
+              </p>
+              <div className="contact-list">
+                <a className="contact-item" href="tel:+447484275241">
+                  <FontAwesomeIcon icon={faPhone} />
+                  <span>+44 7484 275 241</span>
+                </a>
+                <a className="contact-item" href="mailto:ewan-stewart@outlook.com">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span>ewan-stewart@outlook.com</span>
+                </a>
               </div>
-
-              <div className="row">
-                <div className="col-sm-12">
-                  <img src={profile} className="profilePic" alt="Profile Picture" />
+              <div className="hero-actions">
+                <a href={PROJECTS_URL} className="btn-primary">
+                  View Projects <FontAwesomeIcon icon={faArrowRight} />
+                </a>
+                <div className="social-row">
+                  <a href="https://www.linkedin.com/in/ewan-stewart-4905b0266/" aria-label="LinkedIn">
+                    <img src={linkedin} className="social-icon" alt="LinkedIn" />
+                  </a>
+                  <a href="https://github.com/EwanStewart" aria-label="GitHub">
+                    <img src={github} className="social-icon" alt="GitHub" />
+                  </a>
                 </div>
-              </div>
-
-              <div className="row">
-                <div className="col-sm-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <h5 className="card-title">About Me</h5>
-                      <p className="card-text">
-                        A recent Computing graduate from the University of Abertay with a 2:1 BSc Hons Degree, I am passionate about software development and developing a great user experience through effective solutions.
-                      </p>
-                      <p>
-                        <FontAwesomeIcon icon={faPhone} />
-                        <span>+44 7484 275 241</span>
-                      </p>
-                      <p>
-                        <FontAwesomeIcon icon={faEnvelope} />
-                        <span> ewan-stewart@outlook.com </span>
-                      </p>
-
-                      <a href="https://ewanstewart.github.io/portfolio/?data=projects" className="btn btn-dark">Check Out My Projects!</a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-sm-6">
-                  <a href="https://www.linkedin.com/in/ewan-stewart-4905b0266/"><img src={linkedin} className="socialLinks" alt="LinkedIn"/></a>
-                </div>
-                <div className="col-sm-6">
-                  <a href="https://github.com/EwanStewart"><img src={github} className="socialLinks" alt="GitHub"/></a>
-                </div>            
               </div>
             </div>
-          </body>
-        </div>
-
-        <footer className="footer bg-dark text-center fixed-bottom">
-          <div className="container">
-            <span className="text-light">Developed By Ewan Stewart (2023)</span>
+            <div className="hero-portrait">
+              <img src={profile} className="profilePic" alt="Ewan Stewart" />
+            </div>
           </div>
-        </footer>
-      </html>      
-    );
-  } else {
-    return <Projects/>
-  }
-}
+        </section>
+      </main>
+      <footer className="footer">
+        <span>© Ewan Stewart {new Date().getFullYear()}</span>
+      </footer>
+    </>
+  );
+};
 
 export default Portfolio;
