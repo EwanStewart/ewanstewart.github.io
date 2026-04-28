@@ -8,15 +8,32 @@ import Projects from './Projects';
 import profile from './images/profile.jpg';
 import linkedin from './images/linkedin.png';
 import github from './images/github.png';
+import launchpadLogo from './images/launchpadbuild_logo.jpeg';
+import bitwiseLogo from './images/bitwise_ltd_logo.jpeg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const PROJECTS_URL = `${process.env.PUBLIC_URL || ''}/?data=projects`;
 
+const monthsBetween = (start: Date, end: Date): number => {
+  return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+};
+
+const formatDuration = (months: number): string => {
+  const yrs = Math.floor(months / 12);
+  const mos = months % 12;
+  const parts: string[] = [];
+  if (yrs > 0) parts.push(`${yrs} yr${yrs === 1 ? '' : 's'}`);
+  if (mos > 0) parts.push(`${mos} mo${mos === 1 ? '' : 's'}`);
+  return parts.length ? parts.join(' ') : '0 mos';
+};
+
 const Portfolio: React.FC = () => {
   const params = new URLSearchParams(window.location.search);
   const showProjects = params.get('data') === 'projects';
+
+  const launchpadDuration = formatDuration(monthsBetween(new Date(2025, 10, 1), new Date()));
 
   if (showProjects) {
     return <Projects />;
@@ -64,6 +81,54 @@ const Portfolio: React.FC = () => {
             <div className="hero-portrait">
               <img src={profile} className="profilePic" alt="Ewan Stewart" />
             </div>
+          </div>
+        </section>
+
+        <section className="experience-section">
+          <header className="section-header">
+            <h2 className="section-title">Experience</h2>
+          </header>
+
+          <div className="experience-list">
+            <article className="experience-item">
+              <div className="experience-logo">
+                <img src={launchpadLogo} alt="Launchpad Build" />
+              </div>
+              <div className="experience-body">
+                <h3 className="experience-company-header">Launchpad Build</h3>
+                <p className="experience-meta">{launchpadDuration}</p>
+                <p className="experience-meta">Edinburgh, United Kingdom</p>
+
+                <div className="experience-roles">
+                  <div className="experience-role-block">
+                    <h4 className="experience-role-sub">Software Engineer</h4>
+                    <p className="experience-meta">Nov 2025 to Present · {launchpadDuration}</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article className="experience-item">
+              <div className="experience-logo">
+                <img src={bitwiseLogo} alt="Bitwise Limited" />
+              </div>
+              <div className="experience-body">
+                <h3 className="experience-company-header">Bitwise Limited</h3>
+                <p className="experience-meta">2 yrs 4 mos</p>
+                <p className="experience-meta">Dunfermline, United Kingdom</p>
+
+                <div className="experience-roles">
+                  <div className="experience-role-block">
+                    <h4 className="experience-role-sub">Software Engineer</h4>
+                    <p className="experience-meta">Sep 2024 to Nov 2025 · 1 yr 2 mos</p>
+                  </div>
+                  <div className="experience-role-block">
+                    <h4 className="experience-role-sub">Graduate Engineer</h4>
+                    <p className="experience-meta">Jul 2023 to Sep 2024 · 1 yr 2 mos</p>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
       </main>
