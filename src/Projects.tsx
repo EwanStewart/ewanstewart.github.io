@@ -57,13 +57,6 @@ const projects: Project[] = [
     tags: ['Wemos', 'Python', 'Arduino'],
   },
   {
-    title: 'FC24 Web App Automation',
-    description:
-      'Selenium-based scripts that automate elements of the FC 24 web application.',
-    url: 'https://github.com/EwanStewart/FIFA24-Automation',
-    tags: ['Python', 'Raspberry Pi'],
-  },
-  {
     title: 'Asset Management',
     description:
       'Asset management system that uses the NIST API to highlight vulnerabilities. Built with Python and SQL.',
