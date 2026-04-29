@@ -1,12 +1,12 @@
 @font-face {
   font-family: "ColdWarm";
-  src: url("../fonts/ColdWarm.ttf") format("truetype");
+  src: url("../../fonts/ColdWarm.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "HankenGrotesk";
-  src: url("../fonts/HankenGrotesk.ttf") format("truetype");
+  src: url("../../fonts/HankenGrotesk.ttf") format("truetype");
   font-display: swap;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from './CV.pdf';
+import CV from '../assets/CV.pdf';
 
 const BASE = process.env.PUBLIC_URL || '';
 const HOME_URL = `${BASE}/`;
