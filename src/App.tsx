@@ -66,11 +66,11 @@ const Portfolio: React.FC = () => {
                 </a>
               </div>
               <div className="hero-actions">
-                <a href={PROJECTS_URL} className="btn-primary">
-                  View Projects <FontAwesomeIcon icon={faArrowRight} />
-                </a>
                 <a href={CV} target="_blank" rel="noreferrer" className="btn-primary">
                   View My CV <FontAwesomeIcon icon={faArrowRight} />
+                </a>
+                <a href={PROJECTS_URL} className="btn-primary">
+                  View Projects <FontAwesomeIcon icon={faArrowRight} />
                 </a>
               </div>
             </div>
