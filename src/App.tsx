@@ -109,6 +109,11 @@ const Portfolio: React.FC = () => {
                     <p className="experience-meta">Nov 2025 to Present · {launchpadDuration}</p>
                   </div>
                 </div>
+
+                <ul className="experience-points">
+                  <li>Contributed to core product development in a fast-paced robotics startup, building features across the full stack.</li>
+                  <li>Designed, championed and implemented workflows and review processes, establishing best practices within a growing startup team.</li>
+                </ul>
               </div>
             </article>
 
@@ -131,6 +136,17 @@ const Portfolio: React.FC = () => {
                     <p className="experience-meta">Jul 2023 to Sep 2024 · 1 yr 2 mos</p>
                   </div>
                 </div>
+
+                <ul className="experience-points">
+                  <li>Placed at a leading UK defence company, collaborating within a large team to deliver quality airborne software.</li>
+                  <li>Placed as the primary engineer for a robotics project for a commercial client. Successfully transformed a struggling product to market under challenging budget and time constraints, whilst working within the client's multidisciplinary team.</li>
+                  <li>Contributed to the full SDLC for multiple Blood Glucose meter projects, ensuring compliance with medical regulatory standards throughout implementation, documentation, and testing.</li>
+                  <li>Developed a cryptographic solution for a negative pressure wound therapy device which ensured device security during service and repair.</li>
+                  <li>Enhanced internal testing infrastructure by improving traceability, enabling its use on safety-critical projects.</li>
+                  <li>Recognised by the Chief Engineer for commitment to development practices and championing policy.</li>
+                  <li>Successfully mentored engineers and a summer intern, supporting professional development.</li>
+                  <li>Demonstrated great adaptability by learning new concepts, technologies, and frameworks to meet customer needs.</li>
+                </ul>
               </div>
             </article>
           </div>
