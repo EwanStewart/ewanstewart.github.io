@@ -7,6 +7,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Finance-Tracker',
+    description:
+      'A self-hosted net wealth dashboard. FastAPI and SQLite project savings forward by compounding each account at its annual rate. The UI tracks income, expenses, and credit card debt alongside a five-year projection chart.',
+    url: 'https://github.com/EwanStewart/Finance-Tracker',
+    tags: ['Python', 'FastAPI', 'SQLite', 'Raspberry Pi'],
+  },
+  {
     title: 'PhotoVault',
     description:
       'A Raspberry Pi 7-inch touchscreen photo frame running as a Flask kiosk. Pulls photos from Google Drive with a live Spotify overlay. A side panel controls TP-Link Tapo smart bulbs on the same network.',
