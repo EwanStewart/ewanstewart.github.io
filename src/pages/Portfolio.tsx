@@ -12,13 +12,14 @@ import github from '../assets/images/github.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import { experience, launchpadStart } from '../data/experience';
+import { experience, launchpadStart, launchpadSeStart } from '../data/experience';
 import { monthsBetween, formatDuration } from '../utils/duration';
 
 const PROJECTS_URL = `${process.env.PUBLIC_URL || ''}/?data=projects`;
 
 const Portfolio: React.FC = () => {
   const launchpadDuration = formatDuration(monthsBetween(launchpadStart, new Date()));
+  const launchpadSeDuration = formatDuration(monthsBetween(launchpadSeStart, new Date()));
 
   return (
     <>
@@ -88,8 +89,8 @@ const Portfolio: React.FC = () => {
 
                     <div className="experience-roles">
                       {item.roles.map((role) => {
-                        const period = role.period === 'Nov 2025 to Present'
-                          ? `${role.period} · ${launchpadDuration}`
+                        const period = role.period === 'Mar 2026 to Present'
+                          ? `${role.period} · ${launchpadSeDuration}`
                           : role.period;
                         return (
                           <div className="experience-role-block" key={role.title}>

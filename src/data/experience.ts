@@ -16,6 +16,7 @@ export type Experience = {
 };
 
 export const launchpadStart = new Date(2025, 10, 1);
+export const launchpadSeStart = new Date(2026, 2, 1);
 
 export const experience: Experience[] = [
   {
@@ -23,11 +24,13 @@ export const experience: Experience[] = [
     logo: launchpadLogo,
     location: 'Edinburgh, United Kingdom',
     roles: [
-      { title: 'Software Engineer', period: 'Nov 2025 to Present' },
+      { title: 'Software Engineer', period: 'Mar 2026 to Present' },
+      { title: 'Junior Software Engineer', period: 'Nov 2025 to Mar 2026 · 4 mos' },
     ],
     points: [
-      'Contributed to core product development in a fast-paced robotics startup, building features across the full stack.',
-      'Designed, championed and implemented workflows and review processes, establishing best practices within a growing startup team.',
+      'Built the ROS 2 to Beckhoff PLC control stack, bridging TwinCAT to ROS 2 over ADS on ros2_control.',
+      'Developed PLC logic in Structured Text: multi-axis gantry motion, machine safety, and function blocks for grippers, silos, vacuum and vision peripherals.',
+      "Set up and designed the team's CI release automation and versioning practices.",
     ],
   },
   {
