@@ -28,8 +28,10 @@ export const experience: Experience[] = [
       { title: 'Junior Software Engineer', period: 'Nov 2025 to Mar 2026 · 4 mos' },
     ],
     points: [
+      'Contributed to core product development in a fast-paced robotics startup, building features across the full stack.',
       'Built the ROS 2 to Beckhoff PLC control stack, bridging TwinCAT to ROS 2 over ADS on ros2_control.',
       'Developed PLC logic in Structured Text: multi-axis gantry motion, machine safety, and function blocks for grippers, silos, vacuum and vision peripherals.',
+      'Travelled to Los Angeles for a two-week on-site deployment, commissioning a system I designed and built the software for through hands-on integration and debugging.',
       "Set up and designed the team's CI release automation and versioning practices.",
     ],
   },
