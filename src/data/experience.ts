@@ -16,7 +16,6 @@ export type Experience = {
 };
 
 export const launchpadStart = new Date(2025, 10, 1);
-export const launchpadSeStart = new Date(2026, 2, 1);
 
 export const experience: Experience[] = [
   {
@@ -24,8 +23,7 @@ export const experience: Experience[] = [
     logo: launchpadLogo,
     location: 'Edinburgh, United Kingdom',
     roles: [
-      { title: 'Software Engineer', period: 'Mar 2026 to Present' },
-      { title: 'Junior Software Engineer', period: 'Nov 2025 to Mar 2026 · 4 mos' },
+      { title: 'Software Engineer', period: 'Nov 2025 to Present' },
     ],
     points: [
       'Contributed to core product development in a fast-paced robotics startup, building features across the full stack.',
