@@ -32,7 +32,7 @@ const Portfolio: React.FC = () => {
             <div className="hero-text">
               <h1 className="nameTitle">Ewan Stewart</h1>
               <p className="bio">
-                Software Engineer with three years of industry experience in both consultancy and startup environments.
+                Software Engineer with over three years of industry experience in both consultancy and startup environments.
                 Produced production software and involved in the full software development lifecycle across defence, medical and robotics projects.
               </p>
               <div className="contact-list">
